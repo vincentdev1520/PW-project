@@ -18,7 +18,7 @@ export class App extends Component {
     }
 
     componentDidMount() {
-
+        //iku
         // getting user info for navigation bar
         auth.onAuthStateChanged(user => {
             if (user) {
