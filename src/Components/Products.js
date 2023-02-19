@@ -10,9 +10,9 @@ export const Products = () => {
 
     return (
         <>
-            {products.length !== 0 && <h1>Products</h1>}
+            {products.length !== 0 && <h1>Productos</h1>}
             <div className='products-container'>
-                {products.length === 0 && <div>slow internet...no products to display</div>}
+                {products.length === 0 && <div>Cargando...productos no disponibles en este momento</div>}
                 {products.map(product => (
                     <div className='product-card' key={product.ProductID}>
                         <div className='product-img'>

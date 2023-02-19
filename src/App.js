@@ -24,13 +24,13 @@ export class App extends Component {
             if (user) {
                 db.collection('SignedUpUsersData').doc(user.uid).get().then(snapshot => {
                     this.setState({
-                        user: snapshot.data().Name
+                        user: snapshot.data().Name                   
                     })
                 })
             }
             else {
                 this.setState({
-                    user: null
+                    user: null                   
                 })
             }
         })
