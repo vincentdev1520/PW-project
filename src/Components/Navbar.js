@@ -20,6 +20,7 @@ export const Navbar = ({ user }) => {
     }
 
     return (
+        
         <div className='navbox'>
             <div className='leftside'>
                 <img src={logo} alt="" />
@@ -33,7 +34,7 @@ export const Navbar = ({ user }) => {
                 <span><Link to="cartproducts" className='navlink'><Icon icon={cart} /></Link></span>
                 <span className='no-of-products'>{totalQty}</span>
                 <span><button className='logout-btn' onClick={handleLogout}>Logout</button></span>
-            </div>}
+            </div>}            
         </div>
     )
 }
