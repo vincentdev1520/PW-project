@@ -22,9 +22,7 @@ export const Navbar = ({ user }) => {
     return (
         
         <div className='navbox'>
-            <div className='leftside'>
-                <img src={logo} alt="" />
-            </div>
+           
             {!user && <div className='rightside'>
                 <span><Link to="signup" className='navlink'>Registrarse</Link></span>
                 <span><Link to="login" className='navlink'>Iniciar Sesión</Link></span>

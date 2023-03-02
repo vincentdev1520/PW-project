@@ -27,12 +27,12 @@ export const Cart = ({ user }) => {
         <>
             <Navbar user={user} />
             <>
-                {shoppingCart.length !== 0 && <h1>Cart</h1>}
+                {shoppingCart.length !== 0 && <h1>Carrito</h1>}
                 <div className='cart-container'>
                     {
                         shoppingCart.length === 0 && <>
-                            <div>no items in your cart or slow internet causing trouble (Refresh the page) or you are not logged in</div>
-                            <div><Link to="/">Return to Home page</Link></div>
+                            <div>No hay elementos en su carrito (recargar página) o el internet está causando problemas</div>
+                            <div><Link to="/">Reregresar al Inicio</Link></div>
                         </>
                     }
                     {shoppingCart && shoppingCart.map(cart => (
@@ -44,7 +44,7 @@ export const Cart = ({ user }) => {
 
                             <div className='cart-name'>{cart.ProductName}</div>
 
-                            <div className='cart-price-orignal'>Rs {cart.ProductPrice}.00</div>
+                            <div className='cart-price-orignal'>$ {cart.ProductPrice}.00</div>
 
                             <div className='inc' onClick={() => dispatch({ type: 'INC', id: cart.ProductID, cart })}>
                                 <Icon icon={ic_add} size={24} />
@@ -57,7 +57,7 @@ export const Cart = ({ user }) => {
                             </div>
 
                             <div className='cart-price'>
-                                Rs {cart.TotalProductPrice}.00
+                                $ {cart.TotalProductPrice}.00
                             </div>
 
                             <button className='delete-btn' onClick={() => dispatch({ type: 'DELETE', id: cart.ProductID, cart })}>
@@ -68,19 +68,19 @@ export const Cart = ({ user }) => {
                     }
                     {shoppingCart.length > 0 && <div className='cart-summary'>
                         <div className='cart-summary-heading'>
-                            Cart-Summary
+                            Carrito
                         </div>
                         <div className='cart-summary-price'>
-                            <span>Total Price</span>
+                            <span>Precio Total</span>
                             <span>{totalPrice}</span>
                         </div>
                         <div className='cart-summary-price'>
-                            <span>Total Qty</span>
+                            <span>Total</span>
                             <span>{totalQty}</span>
                         </div>
                         <Link to='cashout' className='cashout-link'>
                             <button className='btn btn-success btn-md' style={{ marginTop: 5 + 'px' }}>
-                                Cash on delivery
+                                Pago
                         </button>
                         </Link>
                     </div>}

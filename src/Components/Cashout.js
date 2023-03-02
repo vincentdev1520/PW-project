@@ -63,35 +63,35 @@ export const Cashout = (props) => {
             <Navbar user={props.user} />
             <div className='container'>
                 <br />
-                <h2>Cashout Details</h2>
+                <h2>Detalles de pago</h2>
                 <br />
                 {successMsg && <div className='success-msg'>{successMsg}</div>}
                 <form autoComplete="off" className='form-group' onSubmit={cashoutSubmit}>
-                    <label htmlFor="name">Name</label>
+                    <label htmlFor="name">Nombre</label>
                     <input type="text" className='form-control' required
                         value={name} disabled />
                     <br />
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Correo</label>
                     <input type="email" className='form-control' required
                         value={email} disabled />
                     <br />
-                    <label htmlFor="Cell No">Cell No</label>
+                    <label htmlFor="Cell No">Número de telefono</label>
                     <input type="number" className='form-control' required
                         onChange={(e) => setCell(e.target.value)} value={cell} placeholder='eg 03123456789' />
                     <br />
-                    <label htmlFor="Delivery Address">Delivery Address</label>
+                    <label htmlFor="Delivery Address">Dirección</label>
                     <input type="text" className='form-control' required
                         onChange={(e) => setAddress(e.target.value)} value={address} />
                     <br />
-                    <label htmlFor="Price To Pay">Price To Pay</label>
+                    <label htmlFor="Price To Pay">Precio de pago</label>
                     <input type="number" className='form-control' required
                         value={totalPrice} disabled />
                     <br />
-                    <label htmlFor="Total No of Products">Total No of Products</label>
+                    <label htmlFor="Total No of Products">Total de productos</label>
                     <input type="number" className='form-control' required
                         value={totalQty} disabled />
                     <br />
-                    <button type="submit" className='btn btn-success btn-md mybtn'>SUBMIT</button>
+                    <button type="submit" className='btn btn-success btn-md mybtn'>ACEPTAR</button>
                 </form>
                 {error && <span className='error-msg'>{error}</span>}
             </div>
